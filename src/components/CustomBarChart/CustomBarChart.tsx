@@ -27,10 +27,11 @@ export type BarProps = {
        <YAxis />
        <Bar dataKey="uv" fill="#8884d8" label={{ position: 'top' }}>
          {data.map((_, index) => (
-           <Cell key={`cell-${index}`} fill={colors[index % 6]} />
+           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
          ))}
        </Bar>
      </BarChart>
+     
    </ResponsiveContainer>
   );
  }
