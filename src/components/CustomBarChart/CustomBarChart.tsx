@@ -13,7 +13,7 @@ export type BarProps = {
  
  const CustomBarChart: React.FC<BarProps> = ({ data, colors }) => {
   return (
-    <ResponsiveContainer width="100%" height="45%">
+    <ResponsiveContainer width="100%" height="35%">
      <BarChart
        data={data}
        margin={{
@@ -26,7 +26,7 @@ export type BarProps = {
        <XAxis dataKey="name" />
        <YAxis />
        <Bar dataKey="uv" fill="#8884d8" label={{ position: 'top' }}>
-         {data.map((entry, index) => (
+         {data.map((_, index) => (
            <Cell key={`cell-${index}`} fill={colors[index % 6]} />
          ))}
        </Bar>
