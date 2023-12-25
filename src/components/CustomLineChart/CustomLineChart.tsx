@@ -13,7 +13,7 @@ import {
 
 export type LineProps = {
     data: {
-        uv: number,
+        uv: number, 
     }[];
 };
 
@@ -34,9 +34,20 @@ const CustomLineChart: React.FC<LineProps> = ({ data }) => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
-            <Tooltip />
+            <Tooltip content={({ active, payload, label }) => {
+            if (active && payload && payload.length) {
+              return (
+                <div className="custom-tooltip">
+                  <p className="label">{`${label}`}</p>
+                  <p className="desc">{`${payload[0].value}`}</p>
+                </div>
+              );
+            }
+
+              return null;
+            }} />
             <ReferenceLine label="Max" stroke="red" />
-            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+            <Line type="monotone" dataKey="uv" stroke="#82ca9d" strokeWidth={2} />
           </LineChart>
         </ResponsiveContainer>
       );
