@@ -27,6 +27,12 @@
       ],
       "styles": [
         "styles/*"
+      ],
+      "slices": [
+        "slices/*"
+      ],
+      "assets": [
+        "assets/*"
       ]
     }
   },
