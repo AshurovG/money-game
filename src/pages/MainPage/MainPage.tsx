@@ -217,7 +217,7 @@ const columns = [
 const mockColors = [
     '#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink',
     '#8800FE', '#C4009F', '#BB28FF', '#8042FF', 'blue', 'green',
-    '#FE0088', '#9F00C4', '#28FFBB', '#42FF80', 'yellow', 'purple',
+    '#FE0088', '#9F00C4', '#28FFBB', '#42FF80', '#444', 'purple',
     '#00FE88', '#00C49F', '#28BBFF', '#4280FF', 'orange', 'teal'
    ];
 
